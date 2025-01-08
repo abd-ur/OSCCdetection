@@ -7,12 +7,12 @@ from tqdm import tqdm
 def train_model(model, train_loader, criterion, optimizer, device, num_epochs=10):
     """
     Args:
-        model: PyTorch model to train.
-        train_loader: DataLoader for training data.
+        model: Model to train.
+        train_loader: Training dataloader.
         criterion: Loss function.
         optimizer: Optimizer for training.
-        device: Device to use (CPU or GPU).
-        num_epochs: Number of epochs to train.
+        device: Device.
+        num_epochs: Number of epochs.
 
     Returns:
         Trained model.
@@ -45,9 +45,9 @@ def train_model(model, train_loader, criterion, optimizer, device, num_epochs=10
 def test_model(model, test_loader, device):
     """
   Args:
-        model: PyTorch model to test.
-        test_loader: DataLoader for test data.
-        device: Device to use (CPU or GPU).
+        model: Model to test.
+        test_loader: Test dataloader.
+        device: Device.
 
     Returns:
         Predictions and true labels.
@@ -69,10 +69,10 @@ def test_model(model, test_loader, device):
 def train_and_test_all_models(train_loader, test_loader, device, num_epochs=10):
     """
     Args:
-        train_loader: DataLoader for training data.
-        test_loader: DataLoader for test data.
-        device: Device to use (CPU or GPU).
-        num_epochs: Number of epochs to train each model.
+        train_loader: Train dataloader.
+        test_loader: Test dataloader.
+        device: Device.
+        num_epochs: Number of epochs.
 
     Returns:
         A dictionary with model names as keys and predictions as values.
@@ -115,7 +115,6 @@ def train_and_test_all_models(train_loader, test_loader, device, num_epochs=10):
     return results
 
 if __name__ == "__main__":
-    # Assume the DataLoaders are already created using the previous script
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     num_epochs = 100
 
