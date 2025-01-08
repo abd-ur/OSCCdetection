@@ -23,4 +23,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Acknowledgements**  
 The pretrained models are provided by PyTorch's torchvision.  
-Dataset is provided by kaggle (https://www.kaggle.com/datasets/viditgandhi/oral-cancer-dataset)
+Dataset used is called oral_cancer_dataset available at kaggle-(https://www.kaggle.com/datasets/viditgandhi/oral-cancer-dataset) under Apache 2.0 license.
