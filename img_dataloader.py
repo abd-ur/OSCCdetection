@@ -27,7 +27,7 @@ def load_image_paths_and_labels(image_dir, label_file):
 
     return image_paths, labels
 
-class TissueImageDataset(Dataset):
+class OSCCdataset(Dataset):
     def __init__(self, image_paths, labels, transform=None):
         """
         Args:
@@ -80,8 +80,8 @@ def create_data_loaders(image_dir, label_file, batch_size=16, test_size=0.2, ran
     ])
 
     # Create datasets
-    train_dataset = TissueImageDataset(train_paths, train_labels, transform=transform)
-    test_dataset = TissueImageDataset(test_paths, test_labels, transform=transform)
+    train_dataset = OSCCdataset(train_paths, train_labels, transform=transform)
+    test_dataset = OSCCdataset(test_paths, test_labels, transform=transform)
 
     # Create DataLoaders
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
@@ -90,7 +90,6 @@ def create_data_loaders(image_dir, label_file, batch_size=16, test_size=0.2, ran
     return train_loader, test_loader
 
 if __name__ == "__main__":
-    # Example usage
     image_dir = "path_to_image_directory"  # Replace with actual directory path
     label_file = "path_to_label_file.csv"  # Replace with actual label file
 
