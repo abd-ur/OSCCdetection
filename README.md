@@ -3,6 +3,7 @@
 This project utilizes four popular pretrained deep learning models—ResNet18, VGG16, InceptionV3, and VGG19—applied to cancer image classification. The goal is to predict whether an image depicts carcinoma or not. The final predictions are made using an ensemble learning approach, employing majority voting to combine the predictions of each individual model for better accuracy.
 
 **Key Steps:**  
+**Image Preprocess**:Prepares OSCC/norm image data for training and testing by applying transformations like resizing and normalization, splitting data into training and testing sets, and creating PyTorch DataLoaders.  
 **Pretrained Models**: We use pretrained versions of ResNet18, VGG16, InceptionV3, and VGG19.  
 **Transfer Learning**: The models are fine-tuned for the cancer classification task by modifying their final classification layers to suit the specific number of classes (e.g., binary classification: carcinoma vs. non-carcinoma).  
 **Ensemble Voting**: Once the models are trained, predictions from all four models are combined using majority voting to arrive at the final decision for each image.  
