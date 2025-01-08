@@ -1,4 +1,5 @@
 Cancer Image Classification using Pretrained Models with Ensemble Learning
+
 This project utilizes four popular pretrained deep learning models—ResNet18, VGG16, InceptionV3, and VGG19—applied to cancer image classification. The goal is to predict whether an image depicts carcinoma or not. The final predictions are made using an ensemble learning approach, employing majority voting to combine the predictions of each individual model for better accuracy.
 
 Key Steps:
